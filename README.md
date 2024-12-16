@@ -1,58 +1,72 @@
-# QuantL Repository
+# Nfteria Repository  
 
-**Welcome to the QuantL private repository.** This repository contains documentation, policies, and essential files for the QuantL platform, a service providing machine learning (ML) algorithms through subscription and on-demand offerings.
-
-## About QuantL
-
-QuantL delivers advanced **machine learning models** for businesses and developers:
-- **Subscription Access**: Pre-trained, ready-to-use ML models for analytics and automation.
-- **On-Demand Solutions**: Custom ML algorithms tailored to unique business needs.
-
-This repository includes:
-- **Core Policies** (e.g., refund policy, privacy policy).
-- Essential company and service details for compliance.
-- Relevant supporting documents for partners.
+**Welcome to the Nfteria private repository.** This repository contains documentation, policies, and essential files for Nfteria's community-focused platform.
 
 ---
 
-## Repository Structure
+## About Nfteria  
+
+Nfteria is committed to empowering communities through:  
+- **Engagement Tools**: Interactive tools that foster communication, collaboration, and shared growth.  
+- **Resource Sharing**: Spaces to exchange knowledge, stories, and support.  
+- **Event Management**: Organize workshops, virtual meetups, and collaborative events for community success.  
+
+This repository includes:  
+- **Core Policies** (e.g., privacy policy, terms of engagement).  
+- Documentation to support community tools and platform compliance.  
+- Supporting resources for partners and contributors.  
+
+---
+
+## Repository Structure  
 
 | File/Folder          | Description                                              |
 |----------------------|---------------------------------------------------------|
-| `privacy-policy.md`  | QuantL's Privacy Policy for end users.                  |
-| `terms-of-service.md`| QuantL's Terms of Service document.                     |
-| `refund-policy.md`   | Refund and dispute resolution policies.                 |
+| `privacy-policy.md`  | Nfteria's Privacy Policy outlining user data protection.|
+| `terms-of-service.md`| Terms of Service for platform use.                      |
+| `community-guidelines.md` | Rules and expectations for a healthy community.   |
 | `README.md`          | This file—repository overview.                          |
-| `/docs`              | Additional documentation files (if applicable).         |
+| `/docs`              | Additional documentation files (resources, FAQs, etc.).|
 
 ---
 
-## Policies
+## Policies  
 
 ### Privacy Policy  
-View the privacy policy in [`privacy-policy.md`](./privacy-policy.md). It covers:
+View the privacy policy in [`privacy-policy.md`](./privacy-policy.md). It includes:  
 - Data collection practices.  
-- Usage, retention, and your rights regarding personal data.  
+- Usage, retention, and user rights for data privacy.  
 
-### Refund and Dispute Policy  
-For refund and disputes, see [`refund-policy.md`](./refund-policy.md).  
+### Terms of Service  
+For terms of engagement and use of Nfteria's platform, see [`terms-of-service.md`](./terms-of-service.md).  
+
+### Community Guidelines  
+Maintain a positive and inclusive environment. Read the full guidelines in [`community-guidelines.md`](./community-guidelines.md).  
 
 ---
 
-## Contact Information
+## Contact Information  
 
-For support or inquiries, please contact us:  
+For support, feedback, or questions, reach out to us:  
 - **Email**: [support](mailto:rensley@githat.io)  
-- **Address**: QuantL, 514 West 213 Street, New York, NY 10034, USA  
+- **Address**: Nfteria Inc, 514 West 213 Street, New York, NY 10034, USA  
 
 ---
 
-## Notes for Internal Use
+## Notes for Internal Use  
 
-This README is for internal purposes within QuantL's private repository. Ensure all policies and documentation align with Stripe’s requirements for business compliance.
+This repository is intended for internal documentation and organizational reference.  
+- Ensure all policies align with applicable compliance requirements.  
+- Keep all files up to date with the latest platform updates and partner agreements.  
 
 ---
 
-**Next Steps**  
-1. Maintain updated documentation for all future releases.  
-2. Add relevant release notes as we progress to stable versions (`v1.0.0` and beyond).  
+## Next Steps  
+
+1. Regularly update documentation as Nfteria grows and evolves.  
+2. Add release notes and changelogs for significant updates.  
+3. Monitor and review community feedback to continuously improve.  
+
+---
+
+*Thank you for being part of Nfteria's journey to empower communities.*  
