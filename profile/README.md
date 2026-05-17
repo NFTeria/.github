@@ -1,32 +1,47 @@
 <div align="center">
 
-# NFTeria
+# NFTeria Inc.
 
-**Web4 identity + autonomous agents.**
-
-Research lab + agent framework on the [GitHat](https://githat.io) platform.
-
-[**🌐 nfteria.click**](https://nfteria.click)&nbsp;&nbsp;·&nbsp;&nbsp;[**🏠 GitHat platform**](https://githat.io)
+**A holding org for a fleet of AWS-native apps that share one identity, one payments rail, and one deploy pattern.**
 
 </div>
 
----
+## Active subsidiaries
 
-## What NFTeria is
+| App | Domain | Stack |
+|---|---|---|
+| **GitHat** | [githat.io](https://www.githat.io) | RS256/KMS identity provider for the fleet |
+| **Sebastn** | sebastn.com | Stripe Connect payments-as-a-service |
+| **ClickReserv** | [reserv.click](https://reserv.click) | Multi-tenant booking SaaS |
+| **Quantl** | quantl.click | Quant signals + forecasting |
+| **Colmado** | colmado.click | Commerce |
 
-NFTeria builds at the intersection of identity, agents, and onchain primitives. Active areas:
+## Shared architecture
 
-- **Eliza** — autonomous agent framework ([eliza](https://github.com/NFTeria/eliza))
-- **SebasTN OS** — operating-system-style agent shell
-- **Identity primitives** for Web4 (verifiable identity, attestation, agent delegation)
+```mermaid
+flowchart LR
+    R53[Route 53] --> CF[CloudFront<br/>ACM auto-rotate]
+    CF --> EC2[EC2<br/>Caddy → Node]
+    EC2 --> RDS[(PostgreSQL)]
+    EC2 --> SES[AWS SES]
+    EC2 --> KMS[KMS<br/>RS256 signing]
+```
 
-## Security
+Every app uses the same edge pattern. CAA lockdown at each apex prevents non-AWS CAs from issuing certs. Auth is RS256/JWKS — no shared secrets between issuer and consumers.
 
-- ✅ Verified domain (`nfteria.click`, `www.nfteria.click`)
-- ✅ AWS-native edge with ACM certs
-- ✅ Auth by [GitHat](https://github.com/GitHat-IO)
-- ✅ CAA records, signed commits
+## How auth flows
 
-## Contact
+```mermaid
+sequenceDiagram
+    User->>App: sign in
+    App->>GitHat: redirect with ?app=<slug>
+    GitHat->>KMS: sign access + refresh (RS256)
+    KMS-->>GitHat: signed tokens
+    GitHat-->>App: httpOnly cookies (githat_access/refresh)
+    App->>JWKS: verify locally (cached 5min)
+    JWKS-->>App: ✓
+```
 
-Security: [security@nfteria.click](mailto:security@nfteria.click)
+## Stack
+
+`Next.js 16` · `React 19` · `TypeScript` · `Tailwind 4` · `Node 20` · `PostgreSQL` · `AWS (CloudFront, EC2, SES, KMS, Translate)` · `Stripe Connect` · `Foundry`
