@@ -11,11 +11,11 @@
 <!-- IDENTITY:fleet_table -->
 | App | Domain | Role |
 |---|---|---|
-| **GitHat** | [githat.io](https://www.githat.io) | Identity for the fleet |
+| **GitHat** | [githat.io](https://githat.io) | Identity layer for the fleet |
 | **Sebastn** | [sebastn.com](https://sebastn.com) | Payments rail |
 | **ClickReserv** | [reserv.click](https://reserv.click) | Multi-tenant booking SaaS |
 | **Quantl** | [quantl.click](https://quantl.click) | Quant signals + forecasting |
-| **Colmado** | [colmado.click](https://colmado.click) | Commerce |
+| **Colmado** | [colmado.click](https://colmado.click) | Neighborhood commerce |
 <!-- /IDENTITY:fleet_table -->
 
 ## Shared edge
