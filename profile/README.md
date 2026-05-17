@@ -2,46 +2,41 @@
 
 # NFTeria Inc.
 
-**A holding org for a fleet of AWS-native apps that share one identity, one payments rail, and one deploy pattern.**
+**Holding org for a fleet of apps that share one identity layer, one payments rail, one deploy pattern.**
 
 </div>
 
 ## Active subsidiaries
 
-| App | Domain | Stack |
+| App | Domain | Role |
 |---|---|---|
-| **GitHat** | [githat.io](https://www.githat.io) | RS256/KMS identity provider for the fleet |
-| **Sebastn** | sebastn.com | Stripe Connect payments-as-a-service |
+| **GitHat** | [githat.io](https://www.githat.io) | Identity for the fleet |
+| **Sebastn** | [sebastn.com](https://sebastn.com) | Payments rail |
 | **ClickReserv** | [reserv.click](https://reserv.click) | Multi-tenant booking SaaS |
-| **Quantl** | quantl.click | Quant signals + forecasting |
-| **Colmado** | colmado.click | Commerce |
+| **Quantl** | [quantl.click](https://quantl.click) | Quant signals + forecasting |
+| **Colmado** | [colmado.click](https://colmado.click) | Commerce |
 
-## Shared architecture
+## Shared edge
 
 ```mermaid
 flowchart LR
-    R53[Route 53] --> CF[CloudFront<br/>ACM auto-rotate]
-    CF --> EC2[EC2<br/>Caddy → Node]
-    EC2 --> RDS[(PostgreSQL)]
-    EC2 --> SES[AWS SES]
-    EC2 --> KMS[KMS<br/>RS256 signing]
+    DNS[DNS] --> CDN[CDN<br/>certs auto-rotate]
+    CDN --> Compute[Compute]
+    Compute --> Store[(Data)]
+    Compute --> Mail[Mail]
+    Compute --> Sign[Signing]
 ```
 
-Every app uses the same edge pattern. CAA lockdown at each apex prevents non-AWS CAs from issuing certs. Auth is RS256/JWKS — no shared secrets between issuer and consumers.
+One edge pattern across every app. CAA lockdown at each apex.
 
-## How auth flows
+## Auth shape
 
 ```mermaid
 sequenceDiagram
     User->>App: sign in
-    App->>GitHat: redirect with ?app=<slug>
-    GitHat->>KMS: sign access + refresh (RS256)
-    KMS-->>GitHat: signed tokens
-    GitHat-->>App: httpOnly cookies (githat_access/refresh)
-    App->>JWKS: verify locally (cached 5min)
-    JWKS-->>App: ✓
+    App->>GitHat: redirect
+    GitHat-->>App: signed tokens
+    App->>App: verify locally
 ```
 
-## Stack
-
-`Next.js 16` · `React 19` · `TypeScript` · `Tailwind 4` · `Node 20` · `PostgreSQL` · `AWS (CloudFront, EC2, SES, KMS, Translate)` · `Stripe Connect` · `Foundry`
+Verified locally. No shared secrets between issuer and consumers.
