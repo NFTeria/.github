@@ -8,6 +8,7 @@
 
 ## Active subsidiaries
 
+<!-- IDENTITY:fleet_table -->
 | App | Domain | Role |
 |---|---|---|
 | **GitHat** | [githat.io](https://www.githat.io) | Identity for the fleet |
@@ -15,6 +16,7 @@
 | **ClickReserv** | [reserv.click](https://reserv.click) | Multi-tenant booking SaaS |
 | **Quantl** | [quantl.click](https://quantl.click) | Quant signals + forecasting |
 | **Colmado** | [colmado.click](https://colmado.click) | Commerce |
+<!-- /IDENTITY:fleet_table -->
 
 ## Shared edge
 
