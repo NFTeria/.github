@@ -1,12 +1,25 @@
 <div align="center">
 
-# NFTeria Inc.
+# NFTeria
 
-**Holding org for a fleet of apps that share one identity layer, one payments rail, one deploy pattern.**
+### Your business, onchain.
+
+Onchain payments, commerce, and credentials — non-custodial, USD-priced, no code.
+**Powered by [Access0x1](https://github.com/Access0x1/Access0x1).**
+
+[**nfteria.click**](https://nfteria.click) · live and verified on Base Sepolia + Arc · Arc mainnet this summer
 
 </div>
 
-## Active subsidiaries
+## What you can do
+
+- **Accept USD-priced crypto with one link** — customers never see gas, you never custody funds.
+- **Full onchain commerce** — subscriptions, bookings, invoices, and gift cards, all settled on-chain.
+- **Verified identity** — World ID + ENS checks on every payment.
+
+Powered by **[Access0x1](https://github.com/Access0x1/Access0x1)** — the open, audited onchain payments layer (MIT · 859 tests · verified on Base Sepolia + Arc).
+
+## The fleet
 
 <!-- IDENTITY:fleet_table -->
 | App | Domain | Role |
