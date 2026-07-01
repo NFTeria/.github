@@ -24,11 +24,8 @@ Powered by **[Access0x1](https://github.com/Access0x1/Access0x1)** — the open,
 <!-- IDENTITY:fleet_table -->
 | App | Domain | Role |
 |---|---|---|
-| **GitHat** | [githat.io](https://githat.io) | Identity layer for the fleet |
-| **Sebastn** | [sebastn.com](https://sebastn.com) | Payments rail |
-| **ClickReserv** | [reserv.click](https://reserv.click) | Multi-tenant booking SaaS |
-| **Quantl** | [quantl.click](https://quantl.click) | Quant signals + forecasting |
-| **Colmado** | [colmado.click](https://colmado.click) | Neighborhood commerce |
+| **Access0x1** | [github.com/Access0x1/Access0x1](https://github.com/Access0x1/Access0x1) | Open-source onchain payments + identity rail |
+| **NFTeria** | [nfteria.click](https://nfteria.click) | Onchain commerce built on Access0x1 |
 <!-- /IDENTITY:fleet_table -->
 
 ## Shared edge
