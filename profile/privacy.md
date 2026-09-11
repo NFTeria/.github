@@ -1,81 +1,32 @@
-# Privacy Policy for Nfteria
+# Privacy
 
-_Last Updated: 12/15/24
+_Last updated 2026-09-11._
 
-Welcome to Nfteria! Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your information when you use our services.
+## What NFTeria collects
 
----
+Nothing. NFTeria publishes source code and static pages. There are no accounts, no forms
+and no checkout on any NFTeria page, and none of them sets cookies, runs analytics or
+trackers, or loads anything from another host.
 
-## 1. Information We Collect
+## What the hosts log
 
-We may collect the following types of information:
+GitHub hosts this organization and its pages. GitHub logs and stores the IP address of
+anyone who visits a GitHub Pages site, for security purposes. That logging is GitHub's,
+described in [GitHub's documentation for GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#data-collection)
+and governed by GitHub's own privacy statement.
 
-### a. Personal Information  
-- **Name**  
-- **Email address**  
-- **Contact details**  
-- **LinkedIn IDs or User IDs** (where applicable)
+## If you email us
 
-### b. Usage Information  
-- Interactions with our platform  
-- Browser and device details  
-- IP addresses  
+Writing to an address published here happens in your own mail client. NFTeria receives
+the message you send and nothing else.
 
-### c. Media and Content  
-- Uploaded files, comments, and posts  
-- Linked content (e.g., articles or images)
+## Using UNICA
 
----
+UNICA is testnet software. A payment made with it is a public blockchain transaction:
+the addresses, amounts and receipt are visible to anyone, and NFTeria neither collects
+nor holds them. UNICA never asks for a seed phrase or a private key.
 
-## 2. How We Use Your Information
+## Sites this page links to
 
-We use the collected data to:  
-- Provide and improve our services  
-- Respond to inquiries or comments  
-- Personalize user experiences  
-- Ensure security and prevent misuse  
-
----
-
-## 3. Data Sharing and Disclosure
-
-We **do not sell** or share your personal data with third parties except:  
-- When required by law  
-- To trusted service providers (e.g., hosting platforms) to operate Nfteria  
-- To protect our rights and ensure compliance  
-
----
-
-## 4. Data Security
-
-We implement industry-standard security measures to safeguard your data. However, no online platform is entirely secure, so use our services with caution.
-
----
-
-## 5. Your Rights
-
-You have the right to:  
-- Access, update, or delete your personal data  
-- Request a copy of your data  
-- Opt-out of certain data processing  
-
-To exercise these rights, please contact us at **[rensley@nfteria.cc]**.
-
----
-
-## 6. Changes to This Policy
-
-We may update this Privacy Policy periodically. We’ll notify you about significant changes via our platform or email.
-
----
-
-## 7. Contact Us
-
-If you have questions about this Privacy Policy or how your data is handled, contact us at:  
-
-**Email**: [rensley@nfteria.cc]  
-**LinkedIn**: [NFTeria Inc]([https://nfteria.io](https://www.linkedin.com/company/nfteria/))
-
----
-
-Thank you for trusting Nfteria! 🚀
+GitHub, block explorers and nfteria.click are separate from this page and have their own
+practices.
