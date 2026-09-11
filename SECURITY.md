@@ -1,31 +1,24 @@
-# Security Policy
+# Security policy
 
 ## Reporting a vulnerability
 
-Email **security@nfteria.click** with:
-- A description of the vulnerability + affected component
-- Reproduction steps or proof-of-concept
-- Your name + handle if you want public credit
+If the issue is already public, open an issue on the affected repository. If it is not,
+email **dev@nfteria.click**. Include what the issue is, which component it affects, and
+how to reproduce it.
 
-We aim to:
-- Acknowledge within 48 hours
-- Assess + scope within 5 business days
-- Patch + disclose responsibly (90-day default window, faster for critical)
+There is no bug bounty.
 
 ## Scope
 
-In scope: the GitHat-platform apps under this organization.
-Out of scope: third-party services (Stripe, AWS, SES), social-engineering, physical, denial-of-service.
+The repositories published under this organization. NFTeria's product is UNICA, which is
+**testnet only**: there is no mainnet deployment and no real value at risk. UNICA's own
+security policy is in [its repository](https://github.com/NFTeria/UNICA/blob/main/SECURITY.md).
 
-## Bug bounty
+Out of scope: third-party services, denial of service, social engineering, and physical
+access.
 
-We do not currently run a paid bounty program but happily credit reporters in patch notes.
+## Known open findings
 
-## Cryptography + identity
-
-GitHat tokens are RS256-signed via AWS KMS. Public verification material is at `/.well-known/jwks.json` on the issuer. CAA records lock cert issuance to AWS Certificate Manager only.
-
-## Preferred languages
-
-English.
-
+Security Advisory 001, a Critical finding in the UNICA V2 release candidate, is published
+in the UNICA repository. V2 is blocked and deployed nowhere; no deployed release is
+affected by it.
