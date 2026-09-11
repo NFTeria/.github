@@ -1,54 +1,49 @@
-<div align="center">
-
 # NFTeria
 
-### Your business, onchain.
+**An independent builder. Its current product is UNICA.**
 
-Onchain payments, commerce, and credentials — non-custodial, USD-priced, no code.
-**Powered by [Access0x1](https://github.com/Access0x1/Access0x1).**
+## UNICA — merchant settlement on Uniswap v4
 
-[**nfteria.click**](https://nfteria.click) · live and verified on Base Sepolia + Arc · Arc mainnet this summer
+UNICA is an MIT-licensed settlement hook and modular integration layer for Uniswap v4.
+A payer pays in one currency, a recipient receives another, in one transaction, through
+Uniswap's official Universal Router, into a pool whose hook admits a swap only on that
+path and only for a registered order, and which emits a versioned receipt.
 
-</div>
+**UNICA is testnet only. There is no mainnet deployment and no real value at risk. No
+part of it has been audited.**
 
-## What you can do
+| | |
+|---|---|
+| Code | [github.com/NFTeria/UNICA](https://github.com/NFTeria/UNICA) — MIT |
+| App | [nfteria.github.io/UNICA](https://nfteria.github.io/UNICA/) |
+| About | [nfteria.github.io](https://nfteria.github.io) · [nfteria.click](https://nfteria.click) |
 
-- **Accept USD-priced crypto with one link** — customers never see gas, you never custody funds.
-- **Full onchain commerce** — subscriptions, bookings, invoices, and gift cards, all settled on-chain.
-- **Verified identity** — World ID + ENS checks on every payment.
+Built on Uniswap v4, ENSv2 on Sepolia, and The Graph. NFTeria is an independent builder;
+UNICA is not commissioned by, affiliated with, endorsed by, or reviewed by Uniswap or any
+other ecosystem named here.
 
-Powered by **[Access0x1](https://github.com/Access0x1/Access0x1)** — the open, audited onchain payments layer (MIT · 859 tests · verified on Base Sepolia + Arc).
+### Every release at the rung it has actually reached
 
-## The fleet
-
-<!-- IDENTITY:fleet_table -->
-| App | Domain | Role |
+| Release | State | What is true |
 |---|---|---|
-| **Access0x1** | [github.com/Access0x1/Access0x1](https://github.com/Access0x1/Access0x1) | Open-source onchain payments + identity rail |
-| **NFTeria** | [nfteria.click](https://nfteria.click) | Onchain commerce built on Access0x1 |
-<!-- /IDENTITY:fleet_table -->
+| **V1** | live, testnet | Live on Ethereum Sepolia. Source-verified on Sourcify as a partial match. One settlement: 0.001 ETH in, 2.003660 USDC out. |
+| **V2** | blocked | Written and frozen as rc1, deployed nowhere. Held back by an internally identified Critical finding, published as Security Advisory 001. |
+| **V3** | live, testnet | Settled on Ethereum Sepolia: 0.001 ETH in, 2.216294 USDC out. A second settlement ran in a browser, where the merchant was a name, `nfteria.eth`, resolved on ENSv2 Sepolia and shown to the payer before signing. Deployed and source-verified at one address on Ethereum, Unichain, Base and Arbitrum Sepolia; it has settled only on Ethereum Sepolia. |
+| **Experimental** | testnet, outside the release line | One order settled on Robinhood Chain testnet (chain 46630) on 2026-09-11 through a separate experimental hook: 0.001 Robinhood test TSLA in, 0.393052 uTUSD out. Robinhood test tokens have no real-world value, and neither does uTUSD. There is no oracle in that path, and its source is not verified on the explorer. |
+| **v4** | designed | Being designed. Not built, not deployed. It will be a separate deployment with its own addresses, not an upgrade of anything above. |
 
-## Shared edge
+"UNICA v4" is a UNICA release name. It is not Uniswap v4, the AMM UNICA is built on.
 
-```mermaid
-flowchart LR
-    DNS[DNS] --> CDN[CDN<br/>certs auto-rotate]
-    CDN --> Compute[Compute]
-    Compute --> Store[(Data)]
-    Compute --> Mail[Mail]
-    Compute --> Sign[Signing]
-```
+## Earlier work
 
-One edge pattern across every app. CAA lockdown at each apex.
+**[Access0x1](https://github.com/Access0x1/Access0x1)** — built for ETHGlobal New York and
+ETHGlobal Lisbon. An MIT-licensed, non-custodial rail for onchain identity and USD-priced
+payments in USDC, with a merchant layer over it. Its own repository states where it
+stands: **testnets only, no mainnet deployment, no token**, and a first-party self-audit
+by its maintainer rather than an external audit. UNICA is separate work, written from
+scratch, and shares no code with it.
 
-## Auth shape
+## This repository
 
-```mermaid
-sequenceDiagram
-    User->>App: sign in
-    App->>GitHat: redirect
-    GitHat-->>App: signed tokens
-    App->>App: verify locally
-```
-
-Verified locally. No shared secrets between issuer and consumers.
+Organization files only: this profile page, the security policy, and the privacy
+statement. Product code lives in its own repository.
